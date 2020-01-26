@@ -1,0 +1,26 @@
+﻿@model City
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Weather</title>
+</head>
+<body>
+    <h1>Search City and Get Weather Forecast</h1>
+        <div>
+            <strong>City Name  :</strong>
+            @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+            <br />
+            <br />
+            <input type="button" value="Search Forecast"  onclick="location.href = '@Url.Action("WeatherDetail", "Weather")?city=' + $('#Name').val() " />
+        </div>
+    </body>
+</html>

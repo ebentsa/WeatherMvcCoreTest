@@ -1,0 +1,39 @@
+﻿@model WeatherMvcCoreTest.Models.ResultViewModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>WeatherDetail</title>
+</head>
+<body>
+    <div>
+        <h2>Weather Forecast</h2>
+        <table>
+            <tr>
+                <td>
+                    <strong>City: </strong>
+                    @Model.City  ,
+                    @Model.Country
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <strong>Weather:</strong>
+                    @Model.Main
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Temperature (Min) @Model.TempMin<br />
+                    Temperature (Max) @Model.TempMax<br />
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
